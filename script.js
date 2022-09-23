@@ -102,7 +102,6 @@ FormUsers.addEventListener('input', () => showMain(usersData));
 FormUsers.addEventListener('click', preventMultiSort);
 
 fetchHandler();
-
 resetUsers.addEventListener("click", () => {
   FormUsers.reset();
   cards.innerHTML = renderUserData(usersData);

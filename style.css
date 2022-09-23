@@ -259,13 +259,17 @@ button:active {
     height: 165px;
   }
 
+  .menu__name {
+    margin: 3px 10px 3px 20px;
+  }
+
   .menu__button_reset {
     margin: 0 30px;
   }
 
   input[type="text"] {
     height: 20px;
-    width: 205px;
+    width: 190px;
   }
 }
 
@@ -282,6 +286,6 @@ button:active {
 
   input[type="text"] {
     height: 20px;
-    width: 180px;
+    width: 170px;
   }
 }
