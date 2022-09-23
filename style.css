@@ -254,13 +254,17 @@ button:active {
     margin: 10px;
   }
 
+  label {
+    font-size: 15px;
+  }
+
   .card {
     margin: 10px 0;
     height: 165px;
   }
 
   .menu__name {
-    margin: 3px 10px 3px 20px;
+    margin: 3px 5px 3px 20px;
   }
 
   .menu__button_reset {
@@ -269,7 +273,7 @@ button:active {
 
   input[type="text"] {
     height: 20px;
-    width: 190px;
+    width: 160px;
   }
 }
 
@@ -284,16 +288,5 @@ button:active {
     font-size: 16px;
   }
 
-  input[type="text"] {
-    height: 20px;
-    width: 160px;
-  }
 
-  .menu__name {
-    margin: 3px 5px 3px 20px;
-  }
-
-  label {
-    font-size: 15px;
-  }
 }
