@@ -4,6 +4,23 @@ let usersData = [];
 const searchInput = document.querySelector(".menu__input");
 const cards = document.querySelector(".cards");
 const resetUsers = document.querySelector(".menu__button_reset");
+const sort_age = document.getElementsByName("sort_age");
+const sort_name = document.getElementsByName("sort_name");
+
+const preventMultiSort = (e) => {
+  if (e.target.for || e.target.id) {
+    if (e.target.name === 'sort_name' && FormUsers.sort_age.value) {
+      sort_age.forEach((el) => {
+        el.checked = false;
+      })
+    }
+    if (e.target.name === 'sort_age' && FormUsers.sort_name.value) {
+      sort_name.forEach((el) => {
+        el.checked = false;
+      })
+    }
+  }
+}
 
 async function fetchHandler() {
   try {
@@ -37,15 +54,10 @@ function renderUserData(data) {
 };
 
 function filterUsers(data) {
-  console.log(data);
   const SortAge = sortByAge(data);
-  console.log(SortAge);
   const sortName = sortByName(SortAge);
-  console.log(sortName);
   const filterSex = filterBySex(sortName);
-  console.log(filterSex);
   const sortSearch = SortBySearch(filterSex);
-  console.log(sortSearch);
   return sortSearch;
 };
 
@@ -56,21 +68,21 @@ function filterBySex(data) {
 };
 
 function sortByAge(data) {
-  if (FormUsers.filter_age.value === 'old') {
+  if (FormUsers.sort_age.value === 'old') {
     return usersData.sort((a, b) => b.dob.age - a.dob.age);
   }
-  if (FormUsers.filter_age.value === 'young') {
+  if (FormUsers.sort_age.value === 'young') {
     return usersData.sort((a, b) => a.dob.age - b.dob.age);
-  } console.log(data);
+  }
 
   return data;
 };
 
 function sortByName(data) {
-  if (FormUsers.filter_name.value === 'A-Z') {
+  if (FormUsers.sort_name.value === 'A-Z') {
     return usersData.sort((a, b) => a.name.first.charAt(0) < b.name.first.charAt(0) ? -1 : 1);
   }
-  if (FormUsers.filter_name.value === 'Z-A') {
+  if (FormUsers.sort_name.value === 'Z-A') {
     return usersData.sort((a, b) => a.name.first.charAt(0) > b.name.first.charAt(0) ? -1 : 1);
   }
   return data;
@@ -89,4 +101,5 @@ function SortBySearch(data) {
 };
 
 FormUsers.addEventListener('input', () => showMain(usersData));
+FormUsers.addEventListener('click', preventMultiSort);
 document.addEventListener('DOMContentLoaded', fetchHandler);
