@@ -200,7 +200,7 @@ button {
   .cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     max-width: 1050px;
     max-height: 3150px;
     margin-left: 0px;
@@ -208,9 +208,8 @@ button {
 
   .card {
     flex-direction: column;
-    margin: 10px 10px 10px 10px;
     width: 165px;
-    height: 150px;
+    height: 165px;
   }
 
   .card__image {
@@ -235,4 +234,13 @@ button {
     font-size: 12px;
   }
 
+}
+
+@media (max-width:420px) {
+
+
+  .card {
+    margin: 10px 0;
+    height: 165px;
+  }
 }
