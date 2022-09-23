@@ -248,4 +248,18 @@ button {
     margin: 10px 0;
     height: 165px;
   }
+
+  .menu__button_reset {
+    margin: 0 30px;
+  }
+
+  input[type="text"] {
+    border-radius: 5px;
+    height: 15px;
+    width: 205px;
+  }
+
+  .menu__search {
+    margin-left: 20px;
+  }
 }
