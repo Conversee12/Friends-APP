@@ -74,7 +74,6 @@ function sortByAge(data) {
   if (FormUsers.sort_age.value === 'young') {
     return usersData.sort((a, b) => a.dob.age - b.dob.age);
   }
-
   return data;
 };
 
@@ -87,7 +86,6 @@ function sortByName(data) {
   }
   return data;
 };
-
 
 function SortBySearch(data) {
   if (searchInput.value) {
@@ -102,4 +100,10 @@ function SortBySearch(data) {
 
 FormUsers.addEventListener('input', () => showMain(usersData));
 FormUsers.addEventListener('click', preventMultiSort);
-document.addEventListener('DOMContentLoaded', fetchHandler);
+
+fetchHandler();
+
+resetUsers.addEventListener("click", () => {
+  FormUsers.reset();
+  cards.innerHTML = renderUserData(usersData);
+});

@@ -20,10 +20,12 @@ body {
   top: 10px;
   display: flex;
   flex-direction: column;
+  flex-wrap: nowrap;
   color: white;
   background-color: rgb(25, 33, 196);
   font-size: 20px;
   height: 350px;
+  min-width: 300px;
   border-radius: 15px;
   margin-top: 10px;
 }
@@ -48,14 +50,12 @@ label {
   margin: 7px;
 }
 
-
 input[type="text"] {
   border-radius: 5px;
   border: 1px solid transparent;
   height: 20px;
   width: 120px;
 }
-
 
 .menu__name {
   margin: 19px;
@@ -78,6 +78,20 @@ button {
   width: 90%;
   height: 30px;
   font-size: 16px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background-color: rgb(232, 221, 16);
+  cursor: pointer;
+  transform: translateY(-5px);
+  box-shadow: 0 5px 0 darkorange;
+}
+
+button:active {
+  background-color: rgb(232, 221, 16);
+  transform: translateY(-1px);
+  box-shadow: 0 1px 0 darkorange;
 }
 
 .cards {
@@ -85,7 +99,7 @@ button {
   flex-wrap: wrap;
   max-width: 1050px;
   min-height: 600px;
-  max-height: 1150px;
+  max-height: 2350px;
   margin-left: 25px;
 }
 
@@ -121,7 +135,6 @@ button {
   font-weight: 1000;
 }
 
-
 .card__city {
   align-self: center;
   font-weight: 500;
@@ -147,45 +160,45 @@ button {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    font-size: 17px;
+    font-size: 19px;
     height: 190px;
+    width: 100%;
     margin-top: 0px;
   }
 
   label {
-    font-size: 14px;
+    font-size: 16px;
   }
 
   .menu__form {
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
+    margin: 0px auto;
   }
 
   .menu__search {
-    margin: 3px;
+    margin-left: 20px;
   }
 
   .menu__search label {
-    font-size: 17px;
+    font-size: 19px;
   }
 
   input[type="text"] {
-    border-radius: 5px;
-    height: 15px;
+    height: 20px;
     width: 210px;
   }
 
   .menu__name {
-    margin: 5px 20px;
+    margin: 3px 20px;
   }
 
   .menu__age {
-    margin: 5px;
+    margin: 3px;
   }
 
   .menu__sex {
-    margin: 5px 20px;
+    margin: 3px 20px;
   }
 
   .menu__button_reset {
@@ -193,7 +206,7 @@ button {
   }
 
   button {
-    width: 300px;
+    min-width: 300px;
     height: 20px;
     font-size: 16px;
   }
@@ -219,7 +232,6 @@ button {
   }
 
   .card__image img {
-    border-radius: 50%;
     width: 80px;
   }
 
@@ -235,13 +247,10 @@ button {
   .card__street {
     font-size: 12px;
   }
-
 }
 
-@media (max-width:420px) {
+@media (max-width:500px) {
   .container {
-    display: flex;
-    flex-direction: column;
     margin: 10px;
   }
 
@@ -255,12 +264,24 @@ button {
   }
 
   input[type="text"] {
-    border-radius: 5px;
-    height: 15px;
+    height: 20px;
     width: 205px;
   }
+}
 
-  .menu__search {
-    margin-left: 20px;
+@media (max-width:380px) {
+  .menu__button_reset {
+    margin: 5px 29px;
+  }
+
+  button {
+    min-width: 250px;
+    height: 20px;
+    font-size: 16px;
+  }
+
+  input[type="text"] {
+    height: 20px;
+    width: 180px;
   }
 }
