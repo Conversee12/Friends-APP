@@ -208,8 +208,8 @@ button {
 
   .card {
     flex-direction: column;
-    margin: 10px 12px;
-    width: 150px;
+    margin: 10px 10px 10px 10px;
+    width: 165px;
     height: 150px;
   }
 
