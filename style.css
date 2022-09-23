@@ -273,9 +273,26 @@ button:active {
 
   input[type="text"] {
     height: 20px;
-    width: 160px;
+    width: 180px;
   }
 }
+
+@media (max-width:450px) {
+
+  input[type="text"] {
+    height: 20px;
+    width: 160px;
+  }
+
+  .menu {
+    flex-wrap: wrap;
+    font-size: 17px;
+    height: 190px;
+    width: 100%;
+    margin-top: 0px;
+  }
+}
+
 
 @media (max-width:380px) {
   .menu__button_reset {
@@ -287,6 +304,5 @@ button:active {
     height: 20px;
     font-size: 16px;
   }
-
 
 }
