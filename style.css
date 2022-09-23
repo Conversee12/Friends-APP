@@ -224,6 +224,7 @@ button {
 
   .card__discription {
     font-size: 14px;
+    text-align: center;
   }
 
   .card__city {
@@ -237,8 +238,6 @@ button {
 }
 
 @media (max-width:420px) {
-
-
   .card {
     margin: 10px 0;
     height: 165px;
