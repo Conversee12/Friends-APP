@@ -84,6 +84,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   max-width: 1050px;
+  min-height: 600px;
   max-height: 1150px;
   margin-left: 25px;
 }
